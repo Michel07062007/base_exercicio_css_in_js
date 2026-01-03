@@ -1,11 +1,13 @@
-import Cabecalho from './Cabecalho.module.ts';
-import styles from './Cabecalho.module.ts'
+import React from 'react';
+import ReactDOM from 'react-dom/client'; // Use 'react-dom/client' para projetos novos
+import Cabecalho from './Cabecalho.module';
 
-render(
-  <Cabecalho className={styles.cabecalho}>
-    <h1>EBAC Jobs</h1>
-  </Cabecalho>
-  );
+const root = ReactDOM.createRoot(document.getElementById('root')!);
 
-
-export default Cabecalho
+root.render(
+  <React.StrictMode>
+    <Cabecalho>
+      EBAC Jobs
+    </Cabecalho>
+  </React.StrictMode>
+);

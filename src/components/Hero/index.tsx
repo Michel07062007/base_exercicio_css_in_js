@@ -1,13 +1,15 @@
-import styles from './Hero.module.css'
+import styles from './Hero.module'
+import React from 'react';
+import ReactDOM from 'react-dom/client'; // Use 'react-dom/client' para projetos novos
 
 const Hero = () => (
-  <form className={styles.form}>
-    <div className="container">
-      <h2 className={styles.heroTitle}>
+  <Form className={styles.Form}>
+    <Div className="container">
+      <Hero className={styles.Hero}>
         As melhores vagas para tecnologia, design e artes visuais.
-      </h2>
-    </div>
-  </form>
+      </Hero>
+    </Div>
+  </Form>
 )
 
 export default Hero

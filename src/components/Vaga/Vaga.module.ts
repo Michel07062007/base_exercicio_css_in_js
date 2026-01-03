@@ -1,18 +1,20 @@
-.vaga {
+import styled from "styled-components"
+
+const Vaga = styled.li `
   border: 1px solid var(--cor-principal);
   background-color: var(--cor-secundaria);
   color: var(--cor-principal);
   padding: 16px;
   transition: all ease .3s;
   border-radius: 8px;
-}
+`
 
-.vagaTitulo {
+const VagaTitulo = styled.h3 `
   font-weight: bold;
   margin-bottom: 16px;
-}
+`
 
-.vagaLink {
+const VagaLink = styled.a  `
   border-color: var(--cor-secundaria);
     background-color: var(--cor-principal);
     color: var(--cor-secundaria);
@@ -28,7 +30,7 @@
     @media (max-width: 768px) {
       display: block;
     }
-}
+`
 
 .vaga:hover {
   background-color: var(--cor-principal);
@@ -39,4 +41,10 @@
   border-color: var(--cor-principal);
   background-color: var(--cor-secundaria);
   color: var(--cor-principal);
+}
+
+export default {
+  Vaga,
+  VagaTitulo,
+  VagaLink
 }

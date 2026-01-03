@@ -1,6 +1,8 @@
 import { FormEvent, useState } from 'react'
+import ReactDOM from 'react-dom/client'; // Use 'react-dom/client' para projetos novos
+import styles from './FormVagas.module'
 
-import styles from './FormVagas.module.css'
+const root = ReactDOM.createRoot(document.getElementById('root')!);
 
 type Props = {
   aoPesquisar: (termo: string) => void
@@ -14,18 +16,18 @@ const FormVagas = ({ aoPesquisar }: Props) => {
     aoPesquisar(termo.toLocaleLowerCase())
   }
 
-  return (
-    <form className={styles.form} onSubmit={aoEnviarForm}>
-      <input
-        className={styles.campo}
+  root.render(
+    <Formulario className={styles.Formulario} onSubmit={aoEnviarForm}>
+      <Campo
+        className={styles.Campo}
         placeholder="Front-end, fullstack, node, design"
         onChange={(e) => setTermo(e.target.value)}
         type="search"
       />
-      <button className={styles.btnPesquisar} type="submit">
+      <BtnPesquisar className={styles.BtnPesquisar} type="submit">
         Pesquisar
-      </button>
-    </form>
-  )
+      </BtnPesquisar>
+    </Formulario>
+  );
 }
 export default FormVagas

@@ -7,5 +7,5 @@ const Cabecalho = styled.header `
   padding: 24px 0;
 `
 
-export default Cabecalho
+export default Cabecalho;
 
