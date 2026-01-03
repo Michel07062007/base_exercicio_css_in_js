@@ -1,6 +1,9 @@
 import { FormEvent, useState } from 'react'
 import ReactDOM from 'react-dom/client'; // Use 'react-dom/client' para projetos novos
 import styles from './FormVagas.module'
+import Formulario from './FormVagas.module'
+import Campo from './FormVagas.module'
+import BtnPesquisar from './FormVagas.module'
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 
@@ -28,6 +31,6 @@ const FormVagas = ({ aoPesquisar }: Props) => {
         Pesquisar
       </BtnPesquisar>
     </Formulario>
-  );
+  )
 }
 export default FormVagas

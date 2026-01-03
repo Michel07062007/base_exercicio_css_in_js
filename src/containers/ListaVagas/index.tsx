@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import ReactDOM from 'react-dom/client'; // Use 'react-dom/client' para projetos novos
 import FormVagas from '../../components/FormVagas';
-
+import LiVaga from './ListaVagas.module'
 import Vaga from '../../components/Vaga';
 
-import styles from './ListaVagas.module.ts';
+
+const root = ReactDOM.createRoot(document.getElementById('root')!);
 
 type Vaga = {
   id: string
@@ -97,10 +98,10 @@ const ListaVagas = () => {
     (x) => x.titulo.toLocaleLowerCase().search(filtro) >= 0
   )
 
-  return (
+root.render(
     <div>
       <FormVagas aoPesquisar={(termo: string) => setFiltro(termo)} />
-      <Vaga>
+      <LiVaga>
         {vagasFiltradas.map((vag) => (
           <Vaga
             key={vag.id}
@@ -113,7 +114,7 @@ const ListaVagas = () => {
             requisitos={vag.requisitos}
           />
         ))}
-      </Vaga>
+      </LiVaga>
     </div>
   )
 }

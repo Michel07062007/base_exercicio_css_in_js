@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const Vaga = styled.ul `
+const LiVaga = styled.ul `
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 16px;
@@ -9,7 +9,9 @@ const Vaga = styled.ul `
 `
 
 @media (max-width: 768px) {
-  .Vaga {
+  .LiVaga {
     grid-template-columns: 1fr;
   }
 }
+
+export default LiVaga;

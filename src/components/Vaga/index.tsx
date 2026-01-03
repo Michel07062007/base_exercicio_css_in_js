@@ -1,6 +1,11 @@
-import styles from './Vaga.module'
 import React from 'react';
 import ReactDOM from 'react-dom/client'; // Use 'react-dom/client' para projetos novos
+import Vaga from './Vaga.module'
+import VagaTitulo from './Vaga.module'
+import VagaLink from './Vaga.module'
+
+
+const root = ReactDOM.createRoot(document.getElementById('root')!);
 
 type Props = {
   titulo: string
@@ -12,7 +17,7 @@ type Props = {
   requisitos: string[]
 }
 
-const Vaga = (props: Props) => (
+root.render(
   <Vaga>
     <VagaTitulo>{props.titulo}</VagaTitulo>
     <ul>
@@ -28,6 +33,6 @@ const Vaga = (props: Props) => (
       Ver detalhes e candidatar-se
     </VagaLink>
   </Vaga>
-)
+);
 
 export default Vaga
