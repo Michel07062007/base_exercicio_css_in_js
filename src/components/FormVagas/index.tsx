@@ -1,9 +1,8 @@
 import { FormEvent, useState } from 'react'
 import ReactDOM from 'react-dom/client'; // Use 'react-dom/client' para projetos novos
-import styles from './FormVagas.module'
-import Formulario from './FormVagas.module'
-import Campo from './FormVagas.module'
-import BtnPesquisar from './FormVagas.module'
+import { Formulario } from './FormVagas.module'
+import { Campo } from './FormVagas.module'
+import { BtnPesquisar } from './FormVagas.module'
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 
@@ -20,14 +19,13 @@ const FormVagas = ({ aoPesquisar }: Props) => {
   }
 
   root.render(
-    <Formulario className={styles.Formulario} onSubmit={aoEnviarForm}>
+    <Formulario onSubmit={aoEnviarForm}>
       <Campo
-        className={styles.Campo}
         placeholder="Front-end, fullstack, node, design"
         onChange={(e) => setTermo(e.target.value)}
         type="search"
       />
-      <BtnPesquisar className={styles.BtnPesquisar} type="submit">
+      <BtnPesquisar type="submit">
         Pesquisar
       </BtnPesquisar>
     </Formulario>

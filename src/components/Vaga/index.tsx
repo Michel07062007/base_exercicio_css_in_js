@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'; // Use 'react-dom/client' para projetos novos
-import Vaga from './Vaga.module'
-import VagaTitulo from './Vaga.module'
-import VagaLink from './Vaga.module'
+import { ListaVaga } from './Vaga.module'
+import { VagaTitulo } from './Vaga.module'
+import { VagaLink } from './Vaga.module'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
@@ -16,23 +16,21 @@ type Props = {
   salarioMax: number
   requisitos: string[]
 }
-
-root.render(
-  <Vaga>
-    <VagaTitulo>{props.titulo}</VagaTitulo>
-    <ul>
-      <li>Localizacao: {props.localizacao}</li>
-      <li>Senioridade: {props.nivel}</li>
-      <li>Tipo de contratacao: {props.modalidade}</li>
-      <li>
-        Salário: {props.salarioMin} - {props.salarioMax}
-      </li>
-      <li>Requisitos: {props.requisitos.join(', ')}</li>
-    </ul>
-    <VagaLink>
-      Ver detalhes e candidatar-se
-    </VagaLink>
-  </Vaga>
-);
-
+function Vaga({ titulo, localizacao, nivel, modalidade, salarioMin, salarioMax, requisitos }: Props) {
+  root.render(
+    <div>
+      <VagaTitulo>{titulo}</VagaTitulo>
+      <ul>
+        <ListaVaga>Localizacao: {localizacao}</ListaVaga>
+        <ListaVaga>Senioridade: {nivel}</ListaVaga>
+        <ListaVaga>Tipo de contratacao: {modalidade}</ListaVaga>
+        <ListaVaga>Salário: {salarioMin} - {salarioMax}</ListaVaga>
+        <ListaVaga>Requisitos: {requisitos.join(', ')}</ListaVaga>
+      </ul>
+      <VagaLink>
+        Ver detalhes e candidatar-se
+      </VagaLink>
+    </div>
+  );
+}
 export default Vaga

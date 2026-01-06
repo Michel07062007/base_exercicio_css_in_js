@@ -25,8 +25,4 @@ const  Campo = styled.input `
   outline-color: var(--cor-principal);
 `
 
-export default {
-  Formulario,
-  BtnPesquisar,
-  Campo
-}
+export {Formulario, BtnPesquisar, Campo }
