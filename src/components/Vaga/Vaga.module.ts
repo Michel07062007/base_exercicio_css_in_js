@@ -44,4 +44,5 @@ export {
   ListaVaga,
   VagaTitulo,
   VagaLink,
+  Div
 }

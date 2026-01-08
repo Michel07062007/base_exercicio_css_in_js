@@ -1,11 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client'; // Use 'react-dom/client' para projetos novos
+import { Div } from './Vaga.module'
 import { ListaVaga } from './Vaga.module'
 import { VagaTitulo } from './Vaga.module'
 import { VagaLink } from './Vaga.module'
-
-
-const root = ReactDOM.createRoot(document.getElementById('root')!);
 
 type Props = {
   titulo: string
@@ -17,8 +13,8 @@ type Props = {
   requisitos: string[]
 }
 function Vaga({ titulo, localizacao, nivel, modalidade, salarioMin, salarioMax, requisitos }: Props) {
-  root.render(
-    <div>
+  return (
+    <Div>
       <VagaTitulo>{titulo}</VagaTitulo>
       <ul>
         <ListaVaga>Localizacao: {localizacao}</ListaVaga>
@@ -30,7 +26,7 @@ function Vaga({ titulo, localizacao, nivel, modalidade, salarioMin, salarioMax, 
       <VagaLink>
         Ver detalhes e candidatar-se
       </VagaLink>
-    </div>
-  );
+    </Div>
+  )
 }
 export default Vaga

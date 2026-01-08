@@ -8,16 +8,21 @@ const Formulario = styled.form `
   position: relative;
   display: flex;
   align-items: center;
-`
- const MeuComponente = styled.div`
-  position: relative;
+
   &::before {
+    position: relative;
     content: '';
     position: absolute;
     top: 0; left: 0;
-    width: 100%; height: 100%;
+    width: 100%; 
+    height: 100%;
     background-color: var(--cor-principal);
     opacity: 0.7;
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 24px 0;
   }
 `;
 
@@ -29,16 +34,10 @@ const Div = styled.div `
 const Hero = styled.h2 `
   font-family: Gloock, serif;
   font-size: 48px;
-`
-const Form = styled.form`
-  // estilos normais
+
   @media (max-width: 768px) {
-    height: auto;
-    padding: 24px 0;
-
-
-  const Hero = styled.h2
     font-size: 32px;
+  }
 }`
 
-export { Formulario, Div, Hero}
+export { Formulario, Div, Hero }

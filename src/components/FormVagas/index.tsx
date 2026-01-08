@@ -1,10 +1,8 @@
 import { FormEvent, useState } from 'react'
-import ReactDOM from 'react-dom/client'; // Use 'react-dom/client' para projetos novos
 import { Formulario } from './FormVagas.module'
 import { Campo } from './FormVagas.module'
 import { BtnPesquisar } from './FormVagas.module'
 
-const root = ReactDOM.createRoot(document.getElementById('root')!);
 
 type Props = {
   aoPesquisar: (termo: string) => void
@@ -18,7 +16,7 @@ const FormVagas = ({ aoPesquisar }: Props) => {
     aoPesquisar(termo.toLocaleLowerCase())
   }
 
-  root.render(
+  return (
     <Formulario onSubmit={aoEnviarForm}>
       <Campo
         placeholder="Front-end, fullstack, node, design"
@@ -31,4 +29,4 @@ const FormVagas = ({ aoPesquisar }: Props) => {
     </Formulario>
   )
 }
-export default FormVagas
+export default FormVagas;
